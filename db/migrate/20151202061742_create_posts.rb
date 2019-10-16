@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text :content
       t.text :summary
       t.string :category
+      t.references :author, null: false, foreign_key: true
 
       t.timestamps null: false
     end
